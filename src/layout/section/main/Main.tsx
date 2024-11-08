@@ -1,12 +1,12 @@
 import React from "react";
 import MainFoto from "../../../assets/img/mainFoto.webp";
 import styled from "styled-components";
-import { StyledFlexWrapperCopy } from "../../../components/FlexWrapper";
+import { StyledFlexWrapper } from "../../../components/FlexWrapper";
 
 export const Main = () => {
   return (
     <StyledSection>
-      <StyledFlexWrapperCopy direction={"column"} align={"start"}>
+      <StyledFlexWrapper direction={"column"} align={"start"}>
         <h1>React Developer</h1>
         <span>Roman Kulik</span>
         <p>
@@ -15,7 +15,7 @@ export const Main = () => {
           veniam consequat sunt.
         </p>
         <button>Contact Me</button>
-      </StyledFlexWrapperCopy>
+      </StyledFlexWrapper>
 
       <StyledImage src={MainFoto} alt="my foto" />
     </StyledSection>
@@ -26,7 +26,7 @@ const StyledSection = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 800px;
+  min-height: 800px;
 `;
 
 const StyledImage = styled.img`

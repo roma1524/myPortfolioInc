@@ -1,13 +1,15 @@
 import { Header } from "./layout/header/Header";
 import { Main } from "./layout/section/main/Main";
-import { StyledFlexWrapper } from "./components/FlexWrapper";
+import { StyledWrapper } from "./components/FlexWrapper";
+import { Skills } from "./layout/section/skills/Skills";
 
 function App() {
   return (
-    <StyledFlexWrapper>
+    <StyledWrapper>
       <Header />
       <Main/>
-    </StyledFlexWrapper>
+      <Skills/>
+    </StyledWrapper>
   );
 }
 
