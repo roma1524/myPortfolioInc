@@ -1,28 +1,21 @@
 import React from "react";
 import styled from "styled-components";
 
-export const Nav = () => {
+
+export const Nav = (props: {menuList: Array<string>}) => {
   return (
     <StyledNav>
       <ul>
         
-        <StyledLi>
+        {props.menuList.map((item, index) => {
+          return (
+          <StyledLi key={index}>
           
-          <a href="#">Projects</a>
+            <a href="#">{item}</a>
           
-        </StyledLi>
-        
-        <StyledLi>
-          
-          <a href="#">About Me</a>
-          
-        </StyledLi>
-        
-        <StyledLi>
-          
-          <a href="#">Contact</a>
-          
-        </StyledLi>
+          </StyledLi>
+          )
+        })}
         
       </ul>
     </StyledNav>
