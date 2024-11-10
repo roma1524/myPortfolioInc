@@ -3,6 +3,7 @@ import { Main } from "./layout/section/main/Main";
 import { StyledWrapper } from "./components/FlexWrapper";
 import { Skills } from "./layout/section/skills/Skills";
 import { Works } from "./layout/section/works/Works";
+import { Contacts } from "./layout/section/contacts/Contacts";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Main/>
       <Skills/>
       <Works />
+      <Contacts/>
     </StyledWrapper>
   );
 }

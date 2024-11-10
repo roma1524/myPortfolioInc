@@ -18,6 +18,6 @@ export const Works = () => {
 };
 
 const StyledWorks = styled.section`
-  min-height: 100vh;
+  min-height: 50vh;
   background-color: #c1f4a9;
 `;
