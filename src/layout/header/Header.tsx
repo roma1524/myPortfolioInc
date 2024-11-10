@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Nav } from "../../components/nav/Nav";
 import { Logo } from "../../components/logo/Logo";
 
-const navListItems = ['Projects', 'About Me', 'Contact'];
+export const navListItems = ['Projects', 'About Me', 'Contact'];
 
 export const Header = () => {
   return (

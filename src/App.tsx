@@ -5,6 +5,7 @@ import { Skills } from "./layout/section/skills/Skills";
 import { Works } from "./layout/section/works/Works";
 import { Contacts } from "./layout/section/contacts/Contacts";
 import { AboutMe } from "./layout/section/aboutMe/AboutMe";
+import { Footer } from "./layout/footer/Footer";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Skills/>
       <Works />
       <Contacts/>
+      <Footer />
     </StyledWrapper>
   );
 }
