@@ -1,11 +1,5 @@
 import styled from "styled-components";
 
-export const StyledWrapper = styled.div`
-  max-width: 1071px;
-  margin: 0 auto;
-  border: 1px solid blue;
-`;
-
 type StyledFlexWrapperPropertyType = {
     direction?: string
     justify?: string
@@ -16,7 +10,7 @@ type StyledFlexWrapperPropertyType = {
 
 export const StyledFlexWrapper = styled.div<StyledFlexWrapperPropertyType>`
     display: flex;
-    border: 1px solid red;
+    border: 1px solid green;
     flex-direction: ${props => props.direction || 'row'};
     justify-content: ${props => props.justify || 'flex-start'};
     align-items: ${props => props.align || 'stretch'};
