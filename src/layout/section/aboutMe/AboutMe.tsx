@@ -2,12 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import { SectionTitle } from "../../../components/SectionTitle";
 import { Container } from "../../../components/Container";
+import { theme } from "../../../styles/Theme";
 
 export const AboutMe = () => {
   return (
     <StyledAboutMe>
       <Container>
-        <SectionTitle>About Me</SectionTitle>
+        <SectionTitle marginBottom={"20px"}>About Me</SectionTitle>
         <StyledAboutMeText>
           The long barrow was built on land previously inhabited in the
           Mesolithic period. It consisted of a sub-rectangular earthen tumulus,
@@ -22,16 +23,27 @@ export const AboutMe = () => {
 };
 
 const StyledAboutMe = styled.section`
-  padding-left: 17px;
-  border: 1px solid red;
+padding-left: 22px;
+margin-bottom: 130px;
 `;
 
 const StyledAboutMeText = styled.p`
+  position: relative;
   max-width: 843px;
 
-  font-family: Montserrat;
   font-size: 18px;
   font-weight: 400;
   line-height: 26px;
-  letter-spacing: 4%;
+
+  &::before {
+    position: absolute;
+
+    content: '';
+    height: 100%;
+    width: 5px;
+    top: 0;
+    left: -28px;
+    border-radius: 2px;
+    background: ${theme.color.linearColor};
+  }
 `;

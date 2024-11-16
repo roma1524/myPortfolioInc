@@ -2,7 +2,7 @@ import styled from "styled-components"
 import { theme } from "../../styles/Theme"
 
 type ButtonPropsType = {
-    font: string
+    font?: string
 }
 
 export const Button = styled.button<ButtonPropsType>`

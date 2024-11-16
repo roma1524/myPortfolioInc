@@ -19,7 +19,7 @@ export const Main = () => {
               amet sint. Velit officia consequat duis enim velit mollit.
               Exercitation veniam consequat sunt.
             </StyledMainText>
-            <Button font={'16px'}>Contact Me</Button>
+            <Button font={'16px'} title="Call me">Contact Me</Button>
           </StyledMaunWrap>
 
           <StyledImage src={MainFoto} alt="my foto" />
