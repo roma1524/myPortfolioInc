@@ -9,22 +9,24 @@ export const Skills = () => {
   return (
     <StyledSkills>
       <Container>
-        <SectionTitle>Skills</SectionTitle>
+        <SectionTitle marginBottom={'20px'}>Skills</SectionTitle>
 
-        <StyledFlexWrapper wrap={"wrap"} justify={"center"}>
-          <Skill iconId={"docker"} title={"React"} />
-          <Skill iconId={"react"} title={"JAVACRIPT"} />
-          <Skill iconId={"react"} title={"JAVACRIPT"} />
-          <Skill iconId={"react"} title={"JAVACRIPT"} />
-          <Skill iconId={"react"} title={"JAVACRIPT"} />
-          <Skill iconId={"react"} title={"JAVACRIPT"} />
-          <Skill iconId={"react"} title={"JAVACRIPT"} />
-          <Skill iconId={"react"} title={"JAVACRIPT"} />
-          <Skill iconId={"react"} title={"JAVACRIPT"} />
-          <Skill iconId={"react"} title={"JAVACRIPT"} />
-          <Skill iconId={"react"} title={"JAVACRIPT"} />
-          <Skill iconId={"react"} title={"JAVACRIPT"} />
-          <Skill iconId={"react"} title={"JAVACRIPT"} />
+        <StyledFlexWrapper wrap={"wrap"} justify={"center"} gap={'115px'}>
+
+          <Skill iconId={"docker"} title={"docker"} />
+          <Skill iconId={"docker"} title={"docker"} />
+          <Skill iconId={"docker"} title={"docker"} />
+          <Skill iconId={"docker"} title={"docker"} />
+          <Skill iconId={"docker"} title={"docker"} />
+          <Skill iconId={"docker"} title={"docker"} />
+          <Skill iconId={"docker"} title={"docker"} />
+          <Skill iconId={"docker"} title={"docker"} />
+          <Skill iconId={"docker"} title={"docker"} />
+          <Skill iconId={"docker"} title={"docker"} />
+          <Skill iconId={"docker"} title={"docker"} />
+          <Skill iconId={"docker"} title={"docker"} />
+          <Skill iconId={"docker"} title={"docker"} />
+
         </StyledFlexWrapper>
       </Container>
     </StyledSkills>
@@ -35,5 +37,4 @@ const StyledSkills = styled.section`
   min-height: 500px;
   display: flex;
   flex-direction: column;
-  border: 1px solid red;
 `;
