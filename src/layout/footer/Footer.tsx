@@ -46,7 +46,7 @@ const StyledFooter = styled.footer`
     align-items: center;
     gap: 10px;
     padding: 20px 0;
-    border: 1px solid red;
+    outline: 1px solid red;
 `;
 
 const StyledSocialIconsList = styled.ul`

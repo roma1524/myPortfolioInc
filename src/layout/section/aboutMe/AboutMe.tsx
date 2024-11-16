@@ -37,6 +37,7 @@ const StyledAboutMeText = styled.p`
 
   &::before {
     position: absolute;
+    display: inline-block;
 
     content: '';
     height: 100%;

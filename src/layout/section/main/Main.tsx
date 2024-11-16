@@ -32,7 +32,7 @@ export const Main = () => {
 const StyledMain = styled.section`
   display: flex;
   min-height: 100vh;
-  border: 1px solid red;
+  outline: 1px solid red;
 `;
 
 const StyledMaunWrap = styled.div`
