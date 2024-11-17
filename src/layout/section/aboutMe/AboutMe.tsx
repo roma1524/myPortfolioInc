@@ -23,8 +23,8 @@ export const AboutMe = () => {
 };
 
 const StyledAboutMe = styled.section`
-padding-left: 22px;
-margin-bottom: 130px;
+  padding-left: 22px;
+  margin-bottom: 130px;
 `;
 
 const StyledAboutMeText = styled.p`

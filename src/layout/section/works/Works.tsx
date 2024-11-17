@@ -6,13 +6,17 @@ import { Work } from "./work/Work";
 import project1 from "../../../assets/img/project1.png";
 import { Container } from "../../../components/Container";
 
+const FirstArrSkills = ['javascript', 'PostgreSQL', 'React', 'redux'];
+const SecondArrSkills = ['javascript', 'React Native', 'redux'];
+
 export const Works = () => {
   return (
     <StyledWorks>
       <Container>
-        <SectionTitle>Hello</SectionTitle>
-        <StyledFlexWrapper justify={"space-between"} wrap={"wrap"}>
+        <SectionTitle marginBottom={'32px'}>Projects</SectionTitle>
+        <StyledFlexWrapper justify={"space-between"} wrap={"wrap"} gap={'20px'}>
           <Work
+          skillsArr={FirstArrSkills}
             src={project1}
             title={"TITLE PROJECT"}
             text={
@@ -20,6 +24,15 @@ export const Works = () => {
             }
           />
           <Work
+          skillsArr={SecondArrSkills}
+            src={project1}
+            title={"INSIGHTGRAM"}
+            text={
+              "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
+            }
+          />
+           <Work
+          skillsArr={FirstArrSkills}
             src={project1}
             title={"TITLE PROJECT"}
             text={
@@ -27,15 +40,9 @@ export const Works = () => {
             }
           />
           <Work
+          skillsArr={SecondArrSkills}
             src={project1}
-            title={"TITLE PROJECT"}
-            text={
-              "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
-            }
-          />
-          <Work
-            src={project1}
-            title={"TITLE PROJECT"}
+            title={"INSIGHTGRAM"}
             text={
               "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
             }
@@ -47,6 +54,5 @@ export const Works = () => {
 };
 
 const StyledWorks = styled.section`
-  min-height: 50vh;
-  border: 1px solid red;
+  margin-bottom: 130px;
 `;

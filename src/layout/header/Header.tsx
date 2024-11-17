@@ -30,4 +30,8 @@ const StyledHeader = styled.header`
   height: 100px; // Сомнительно
   padding-top: 30px;
   background-color: ${theme.color.primaryBg};
+
+  ${Container}  {
+    
+  }
 `;
