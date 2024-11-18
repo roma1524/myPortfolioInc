@@ -17,7 +17,6 @@ export const Button = styled.button<ButtonPropsType>`
 
     
     &:hover {
-        cursor: pointer;
         background: transparent;
         border: 1px solid ${theme.color.font};
         color: ${theme.color.font};

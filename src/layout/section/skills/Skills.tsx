@@ -9,10 +9,9 @@ export const Skills = () => {
   return (
     <StyledSkills>
       <Container>
-        <SectionTitle marginBottom={'20px'}>Skills</SectionTitle>
+        <SectionTitle marginBottom={"20px"}>Skills</SectionTitle>
 
-        <StyledFlexWrapper wrap={"wrap"} justify={"center"} gap={'115px'}>
-
+        <StyledFlexWrapper wrap={"wrap"} justify={"center"} gap={"115px"}>
           <Skill iconId={"docker"} title={"docker"} />
           <Skill iconId={"docker"} title={"docker"} />
           <Skill iconId={"docker"} title={"docker"} />
@@ -26,7 +25,6 @@ export const Skills = () => {
           <Skill iconId={"docker"} title={"docker"} />
           <Skill iconId={"docker"} title={"docker"} />
           <Skill iconId={"docker"} title={"docker"} />
-
         </StyledFlexWrapper>
       </Container>
     </StyledSkills>
@@ -34,7 +32,7 @@ export const Skills = () => {
 };
 
 const StyledSkills = styled.section`
-  min-height: 500px;
   display: flex;
   flex-direction: column;
+  margin-bottom: 140px;
 `;

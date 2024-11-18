@@ -12,7 +12,9 @@ type WorkPropsType = {
 export const Work = (props: WorkPropsType) => {
   return (
     <StyledWork>
-      <StyledImage src={props.src} alt="project" />
+      <ImgWrapper>
+        <StyledImage src={props.src} alt="project" />
+      </ImgWrapper>
 
       <StyledWorkDescr>
         <StyledWorkTitle>
@@ -46,6 +48,24 @@ const StyledWork = styled.div`
   display: flex;
   flex-direction: column;
   border-radius: 6px;
+`;
+
+const ImgWrapper = styled.div`
+  position: relative;
+
+  &:hover {
+    &::before {
+      position: absolute;
+
+      content: '';
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(4px);
+    }
+  }
 `;
 
 const StyledImage = styled.img`
