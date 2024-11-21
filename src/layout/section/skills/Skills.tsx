@@ -3,35 +3,36 @@ import styled from "styled-components";
 import { StyledFlexWrapper } from "../../../components/FlexWrapper";
 import { SectionTitle } from "../../../components/SectionTitle";
 import { Skill } from "./skill/Skill";
+import { Container } from "../../../components/Container";
 
 export const Skills = () => {
   return (
     <StyledSkills>
-      <SectionTitle>Skills</SectionTitle>
+      <Container>
+        <SectionTitle marginBottom={"20px"}>Skills</SectionTitle>
 
-      <StyledFlexWrapper wrap={'wrap'} justify={'center'} >
-        <Skill iconId={'docker'} title={'React'}/>
-        <Skill iconId={'react'} title={'JAVACRIPT'}/>
-        <Skill iconId={'react'} title={'JAVACRIPT'}/>
-        <Skill iconId={'react'} title={'JAVACRIPT'}/>
-        <Skill iconId={'react'} title={'JAVACRIPT'}/>
-        <Skill iconId={'react'} title={'JAVACRIPT'}/>
-        <Skill iconId={'react'} title={'JAVACRIPT'}/>
-        <Skill iconId={'react'} title={'JAVACRIPT'}/>
-        <Skill iconId={'react'} title={'JAVACRIPT'}/>
-        <Skill iconId={'react'} title={'JAVACRIPT'}/>
-        <Skill iconId={'react'} title={'JAVACRIPT'}/>
-        <Skill iconId={'react'} title={'JAVACRIPT'}/>
-        <Skill iconId={'react'} title={'JAVACRIPT'}/>
-      </StyledFlexWrapper>
+        <StyledFlexWrapper wrap={"wrap"} justify={"center"} gap={"115px"}>
+          <Skill iconId={"docker"} title={"docker"} />
+          <Skill iconId={"docker"} title={"docker"} />
+          <Skill iconId={"docker"} title={"docker"} />
+          <Skill iconId={"docker"} title={"docker"} />
+          <Skill iconId={"docker"} title={"docker"} />
+          <Skill iconId={"docker"} title={"docker"} />
+          <Skill iconId={"docker"} title={"docker"} />
+          <Skill iconId={"docker"} title={"docker"} />
+          <Skill iconId={"docker"} title={"docker"} />
+          <Skill iconId={"docker"} title={"docker"} />
+          <Skill iconId={"docker"} title={"docker"} />
+          <Skill iconId={"docker"} title={"docker"} />
+          <Skill iconId={"docker"} title={"docker"} />
+        </StyledFlexWrapper>
+      </Container>
     </StyledSkills>
   );
 };
 
 const StyledSkills = styled.section`
-    min-height: 500px;
-    display: flex;
-    flex-direction: column;
-
-    background-color: #ebf1bb;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 140px;
 `;

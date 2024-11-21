@@ -1,29 +1,30 @@
 import React from "react";
 import styled from "styled-components";
-import { theme } from "../../styles/Theme";
+import { theme } from "../../../styles/Theme";
 
 
-export const Nav = (props: {menuList: Array<string>}) => {
+
+export const HeaderMenu = (props: {menuList: Array<string>}) => {
   return (
-    <StyledNav>
+    <StyledHeaderNav>
       <ul>
         
         {props.menuList.map((item, index) => {
           return (
-          <StyledLi key={index}>
+          <StyledHeaderLi key={index}>
           
-            <a href="#">{item}</a>
+            <Link href="#">{item}</Link>
           
-          </StyledLi>
+          </StyledHeaderLi>
           )
         })}
         
       </ul>
-    </StyledNav>
+    </StyledHeaderNav>
   );
 };
 
-const StyledNav = styled.nav`
+const StyledHeaderNav = styled.nav`
 
   ul {
     display: flex;
@@ -31,9 +32,11 @@ const StyledNav = styled.nav`
   }
 `;
 
-const StyledLi = styled.li`
-  a {
-    display: flex;
+const StyledHeaderLi = styled.li`
+`;
+
+ const Link = styled.a`
+     display: flex;
     padding: 12px 20px;
     color: ${theme.color.font};
     font-family: Montserrat;
@@ -52,5 +55,4 @@ const StyledLi = styled.li`
 
       transition: all .3s;
     }
-  }
-`;
+ `

@@ -1,38 +1,84 @@
 import React from "react";
 import styled from "styled-components";
 import { SectionTitle } from "../../../components/SectionTitle";
-import { StyledButton } from "../../../components/Button";
+import { Container } from "../../../components/Container";
+import { Button } from "../../../components/button/Button";
+import { theme } from "../../../styles/Theme";
 
 export const Contacts = () => {
-    return (
-        <StyledContacts>
-            <SectionTitle>Contacts</SectionTitle>
-            <StyledForm>
+  return (
+    <StyledContacts>
+      <Container>
+        <SectionTitle marginBottom={"50px"}>Contacts</SectionTitle>
+        <StyledForm>
+          <Label>
+            Name
+            <StyledField placeholder={"Example"} />
+          </Label>
 
-                <StyledField placeholder={'Name'}/>
-                <StyledField placeholder={'Email'}/>
-                <StyledField placeholder={'Message'} as={'textarea'}/>
-                <StyledButton type={'submit'}>Submit</StyledButton>
-            </StyledForm>
-        
-        </StyledContacts>
-    )
-}
+          <Label>
+            Email
+            <StyledField placeholder={"Value"} />
+          </Label>
 
-const StyledContacts = styled.section`
-    min-height: 50vh;
-    background-color: #f7e8c4;
-`
+          <Label>
+            Mensage
+            <StyledField placeholder={"Hi, i will ..."} as={"textarea"} />
+          </Label>
+
+          <Button type={"submit"}>Submit</Button>
+        </StyledForm>
+      </Container>
+    </StyledContacts>
+  );
+};
+
+const StyledContacts = styled.section`margin-bottom: 180px;`;
 
 const StyledForm = styled.form`
-    max-width: 500px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin: 0 auto;
-`
+  max-width: 530px;
+  width: 100%;
+  min-height: 430px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+
+  textarea{
+    resize: none;
+    height: 165px;
+  }
+`;
 
 const StyledField = styled.input`
-    
-`
+  width: 100%;
+  border: 1px solid ${theme.color.font};
+  border-radius: 6px;
+  padding: 15px 20px;
+
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+
+  background: ${theme.color.primaryBg};
+
+  &::placeholder {
+    color: ${theme.color.font};
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+  }
+
+  &:focus-visible {
+    outline: 1px solid ${theme.color.font};
+  }
+`;
+
+const Label = styled.label`
+  margin-bottom: 30px;
+
+  font-size: 14px;
+  line-height: 17px;
+  color: ${theme.color.font};
+`;

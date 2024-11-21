@@ -1,35 +1,38 @@
 import React from "react";
 import styled from "styled-components";
-// import sk1 from '../../../../assets/img/sk1.png'
 import { Icon } from "../../../../components/icon/Icon";
-
+import { theme } from "../../../../styles/Theme";
 
 type SkillPropsType = {
-    iconId: string
-    title: string
-}
-
+  iconId: string;
+  title: string;
+};
 
 export const Skill = (props: SkillPropsType) => {
   return (
     <StyledSkill>
-      {/* <img src={sk1} alt="javaScript" /> */}
-      <Icon iconId={props.iconId} />
-      <StyledSkillTitle>{props.title}</StyledSkillTitle>
+      <Icon iconId={props.iconId} width={'120px'} height={'113px'} view={'"0 0 120 113"'}/>
+      <StyledSkillTitle>
+        {props.title}
+      </StyledSkillTitle>
     </StyledSkill>
   );
 };
 
-
 const StyledSkill = styled.div`
-    width: 120px;
-    min-height: 164px;
+  width: 120px;
+  min-height: 164px;
 
-    display: flex;
-    flex-direction: column;
-`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+`;
 
-const StyledSkillTitle = styled.div`
-    
-`
+const StyledSkillTitle = styled.h5`
+  color: ${theme.color.font};
+  font-size: 16px;
+  font-weight: 400;
 
+  text-transform: uppercase;
+`;
