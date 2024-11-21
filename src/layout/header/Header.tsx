@@ -31,7 +31,4 @@ const StyledHeader = styled.header`
   padding-top: 30px;
   background-color: ${theme.color.primaryBg};
 
-  ${Container}  {
-    
-  }
 `;

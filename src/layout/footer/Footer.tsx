@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { Nav } from "../../components/nav/Nav";
 import { navListItems } from "../header/Header";
 import { Icon } from "../../components/icon/Icon";
-import { theme } from "../../styles/Theme";
 
 export const Footer = () => {
   return (
@@ -18,7 +17,7 @@ export const Footer = () => {
               iconId={"mail"}
             />
           </StyledSocialItemLink>
-          <span>gmail</span>
+          <StyledFooterTitle>gmail</StyledFooterTitle>
         </StyledSocialItem>
 
         <StyledSocialItem>
@@ -30,7 +29,7 @@ export const Footer = () => {
               iconId={"linked"}
             />
           </StyledSocialItemLink>
-          <span>linkedin</span>
+          <StyledFooterTitle>linkedin</StyledFooterTitle>
         </StyledSocialItem>
 
         <StyledSocialItem>
@@ -42,7 +41,7 @@ export const Footer = () => {
               iconId={"git"}
             />
           </StyledSocialItemLink>
-          <span>GITHUB</span>
+          <StyledFooterTitle>GITHUB</StyledFooterTitle>
         </StyledSocialItem>
       </StyledSocialIconsList>
 
@@ -61,8 +60,8 @@ const StyledFooter = styled.footer`
   padding: 20px 0 100px 0;
   outline: 1px solid red;
 
-  &{Nav} {
-    margin: 50px 0 50px 0;
+  & Nav{
+    color: red;
   }
 `;
 
@@ -76,10 +75,18 @@ const StyledSocialItem = styled.li`
   flex-direction: column;
 `;
 
+const StyledFooterTitle = styled.span`
+
+  font-size: 12px;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+`;
+
 const StyledSocialItemLink = styled.a``;
 
 const StyledCopyright = styled.small`
-display: inline-block;
+  display: inline-block;
   font-size: 14px;
   line-height: 26px;
 `;

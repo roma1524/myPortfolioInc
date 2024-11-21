@@ -11,12 +11,12 @@ export const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
     }
 
-ul li {
-    list-style: none; 
-}
+ul {
+  list-style: none; 
+} 
 
 a {
-        text-decoration: none;
+      text-decoration: none;
     }
 
 button {
