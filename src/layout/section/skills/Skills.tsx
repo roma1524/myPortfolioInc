@@ -4,6 +4,7 @@ import { StyledFlexWrapper } from "../../../components/FlexWrapper";
 import { SectionTitle } from "../../../components/SectionTitle";
 import { Skill } from "./skill/Skill";
 import { Container } from "../../../components/Container";
+import { theme } from "../../../styles/Theme";
 
 export const Skills = () => {
   return (
@@ -35,4 +36,8 @@ const StyledSkills = styled.section`
   display: flex;
   flex-direction: column;
   margin-bottom: 140px;
+
+  @media ${theme.media.mobile} {
+    margin-bottom: 100px;
+  }
 `;

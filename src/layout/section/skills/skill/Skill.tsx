@@ -27,6 +27,12 @@ const StyledSkill = styled.div`
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  /* flex-grow: 1; */
+
+  @media ${theme.media.mobile} {
+    width: 88px;
+    min-height: 120px;
+  }
 `;
 
 const StyledSkillTitle = styled.h5`
