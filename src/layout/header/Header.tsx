@@ -5,6 +5,7 @@ import { Container } from "../../components/Container";
 import { StyledFlexWrapper } from "../../components/FlexWrapper";
 import { theme } from "../../styles/Theme";
 import { HeaderMenu } from "./headerMenu/HeaderMenu";
+import { MobileMenu } from "./mobileMenu/MobileMenu";
 
 export const navListItems = ["Projects", "About Me", "Contact"];
 
@@ -15,6 +16,7 @@ export const Header = () => {
         <StyledFlexWrapper justify={"space-between"}>
           <Logo />
           <HeaderMenu menuList={navListItems} />
+          <MobileMenu menuList={navListItems}/>
         </StyledFlexWrapper>
       </Container>
     </StyledHeader>

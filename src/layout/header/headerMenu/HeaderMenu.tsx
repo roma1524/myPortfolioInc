@@ -30,6 +30,10 @@ const StyledHeaderNav = styled.nav`
     display: flex;
     gap: 40px;
   }
+
+  @media ${theme.media.tablet} {
+    display: none;
+  }
 `;
 
 const StyledHeaderLi = styled.li`

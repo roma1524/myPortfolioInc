@@ -12,8 +12,8 @@ export const Skills = () => {
         <SectionTitle marginBottom={"20px"}>Skills</SectionTitle>
 
         <StyledFlexWrapper wrap={"wrap"} justify={"center"} gap={"115px"}>
-          <Skill iconId={"docker"} title={"docker"} />
-          <Skill iconId={"docker"} title={"docker"} />
+          <Skill iconId={"react"} title={"docker"} />
+          <Skill iconId={"express"} title={"docker"} />
           <Skill iconId={"docker"} title={"docker"} />
           <Skill iconId={"docker"} title={"docker"} />
           <Skill iconId={"docker"} title={"docker"} />

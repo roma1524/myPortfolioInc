@@ -7,5 +7,9 @@ export const theme = {
         fontError: 'rgb(192, 83, 83)',
         buttonColorText: 'rgb(37, 39, 40)',
 
+    },
+    media: {
+        tablet: "screen and (max-width: 768px)",
+        mobile: "screen and (max-width: 576px)"
     }
 }

@@ -5,13 +5,19 @@ import { StyledFlexWrapper } from "../../../components/FlexWrapper";
 import { Container } from "../../../components/Container";
 import { theme } from "../../../styles/Theme";
 import { Button } from "../../../components/button/Button";
+import { font } from "../../../styles/Common";
 
 export const Main = () => {
   return (
     <StyledMain>
       <Container>
-        <StyledFlexWrapper justify={"space-between"} align={"center"} gap={'80px'}>
-          <StyledMaunWrap>
+        <StyledFlexWrapper
+          justify={"space-around"}
+          align={"center"}
+          gap={"80px"}
+          wrap={"wrap-reverse"}
+        >
+          <StyledMainWrap>
             <StyledMainTitle>React Developer</StyledMainTitle>
             <StyledSubTitle>Roman Kulik</StyledSubTitle>
             <StyledMainText>
@@ -19,10 +25,14 @@ export const Main = () => {
               amet sint. Velit officia consequat duis enim velit mollit.
               Exercitation veniam consequat sunt.
             </StyledMainText>
-            <Button font={'16px'} title="Call me">Contact Me</Button>
-          </StyledMaunWrap>
+            <Button font={"16px"} title="Call me">
+              Contact Me
+            </Button>
+          </StyledMainWrap>
 
-          <StyledImage src={MainFoto} alt="my foto" />
+          <ImgWrapper>
+            <Image src={MainFoto} alt="my foto" />
+          </ImgWrapper>
         </StyledFlexWrapper>
       </Container>
     </StyledMain>
@@ -33,37 +43,55 @@ const StyledMain = styled.section`
   display: flex;
   min-height: 100vh;
   outline: 1px solid red;
+
+  @media ${theme.media.mobile} {
+    ${StyledFlexWrapper} {
+      padding-top: 50px;
+      gap: 0;
+    }
+  }
 `;
 
-const StyledMaunWrap = styled.div`
+const StyledMainWrap = styled.div`
   display: flex;
   flex-direction: column;
   align-items: start;
   max-width: 514px;
-`
 
-const StyledImage = styled.img`
-  height: 433px;
-  width: 577px;
+  @media ${theme.media.mobile} {
+    align-items: center;
+  }
+`;
+
+const ImgWrapper = styled.div``;
+
+const Image = styled.img`
+  width: 420px;
+  height: 300px;
   object-fit: cover;
+
+  @media ${theme.media.mobile} {
+    width: 320px;
+    height: 240px;
+  }
 `;
 
 const StyledMainTitle = styled.h1`
-  font-family: "Tinos", serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 20px;
-  margin-bottom: 10px;
+  ${font({
+    family: '"Tinos", serif',
+    weight: 400,
+    Fmin: 16,
+    Fmax: 20
+  })} margin-bottom: 10px;
 `;
 
-const StyledSubTitle = styled.span`
-  background: ${theme.color.linearColor};
+const StyledSubTitle = styled.h2`
+  ${font({ weight: 600, Fmax: 72, Fmin: 40 })} background: ${theme.color
+      .linearColor};
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
-  font-size: 72px;
-  font-weight: 600;
   line-height: 88px;
   letter-spacing: 0%;
   margin-bottom: 11px;
@@ -75,4 +103,8 @@ const StyledMainText = styled.p`
   line-height: 24px;
   letter-spacing: 4%;
   margin-bottom: 30px;
+
+  @media ${theme.media.mobile} {
+    text-align: center;
+  }
 `;
