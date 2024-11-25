@@ -40,9 +40,9 @@ const StyledAboutMeText = styled.p`
     display: inline-block;
 
     content: '';
-    height: 100%;
+    height: 88%;
     width: 5px;
-    top: 0;
+    top: 8px;
     left: -28px;
     border-radius: 2px;
     background: ${theme.color.linearColor};

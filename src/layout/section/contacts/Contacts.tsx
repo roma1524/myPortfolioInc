@@ -13,17 +13,17 @@ export const Contacts = () => {
         <StyledForm>
           <Label>
             Name
-            <StyledField placeholder={"Example"} />
+            <StyledField placeholder={"Example"} required/>
           </Label>
 
           <Label>
             Email
-            <StyledField placeholder={"Value"} />
+            <StyledField placeholder={"Value"} required/>
           </Label>
 
           <Label>
             Mensage
-            <StyledField placeholder={"Hi, i will ..."} as={"textarea"} />
+            <StyledField placeholder={"Hi, i will ..."} as={"textarea"} required/>
           </Label>
 
           <Button type={"submit"}>Submit</Button>

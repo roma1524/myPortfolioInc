@@ -35,7 +35,7 @@ export const Skills = () => {
 const StyledSkills = styled.section`
   display: flex;
   flex-direction: column;
-  margin-bottom: 140px;
+  margin-bottom: 50px;
 
   @media ${theme.media.mobile} {
     margin-bottom: 100px;

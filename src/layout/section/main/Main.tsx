@@ -41,7 +41,8 @@ export const Main = () => {
 
 const StyledMain = styled.section`
   display: flex;
-  min-height: 100vh;
+  min-height: 72vh;
+  margin-bottom: 80px;
 
   @media ${theme.media.mobile} {
     ${StyledFlexWrapper} {
@@ -62,17 +63,22 @@ const StyledMainWrap = styled.div`
   }
 `;
 
-const ImgWrapper = styled.div``;
+const ImgWrapper = styled.div`
+  display: flex;
+  width: 320px;
+  min-height: 240px;
+  flex-grow: 1;
+  `;
 
 const Image = styled.img`
-  width: 420px;
-  height: 300px;
+  width: 100%;
   object-fit: cover;
 
-  @media ${theme.media.mobile} {
+
+  /* @media ${theme.media.mobile} {
     width: 320px;
     height: 240px;
-  }
+  } */
 `;
 
 const StyledMainTitle = styled.h1`
