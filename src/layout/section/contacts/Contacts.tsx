@@ -33,7 +33,13 @@ export const Contacts = () => {
   );
 };
 
-const StyledContacts = styled.section`margin-bottom: 180px;`;
+const StyledContacts = styled.section`
+margin-bottom: 180px;
+
+@media ${theme.media.mobile} {
+  margin-bottom: 150px;
+}
+`;
 
 const StyledForm = styled.form`
   max-width: 530px;

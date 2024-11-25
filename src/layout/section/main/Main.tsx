@@ -42,7 +42,6 @@ export const Main = () => {
 const StyledMain = styled.section`
   display: flex;
   min-height: 100vh;
-  outline: 1px solid red;
 
   @media ${theme.media.mobile} {
     ${StyledFlexWrapper} {

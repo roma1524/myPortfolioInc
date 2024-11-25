@@ -36,6 +36,8 @@ body {
   background-color: ${theme.color.primaryBg};
   color: ${theme.color.font};
   line-height: 1.2;
+
+  min-height: 414px;
 }
 
 `;

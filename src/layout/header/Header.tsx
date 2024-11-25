@@ -7,7 +7,7 @@ import { theme } from "../../styles/Theme";
 import { HeaderMenu } from "./headerMenu/HeaderMenu";
 import { MobileMenu } from "./mobileMenu/MobileMenu";
 
-export const navListItems = ["Projects", "About Me", "Contact"];
+export const navListItems = ["Projects", "Contact"];
 
 export const Header = () => {
   return (

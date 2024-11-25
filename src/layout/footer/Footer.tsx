@@ -58,11 +58,6 @@ const StyledFooter = styled.footer`
   align-items: center;
   gap: 10px;
   padding: 20px 0 100px 0;
-  outline: 1px solid red;
-
-  & Nav{
-    color: red;
-  }
 `;
 
 const StyledSocialIconsList = styled.ul`

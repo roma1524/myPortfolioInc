@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { theme } from "../../styles/Theme";
 
 
+
 export const Nav = (props: {menuList: Array<string>}) => {
   return (
     <StyledNav>

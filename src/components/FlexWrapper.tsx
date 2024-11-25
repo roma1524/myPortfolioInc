@@ -10,7 +10,6 @@ type StyledFlexWrapperPropertyType = {
 
 export const StyledFlexWrapper = styled.div<StyledFlexWrapperPropertyType>`
     display: flex;
-    outline: 1px solid green;
     flex-direction: ${props => props.direction || 'row'};
     justify-content: ${props => props.justify || 'flex-start'};
     align-items: ${props => props.align || 'stretch'};
