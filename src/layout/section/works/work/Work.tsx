@@ -41,13 +41,17 @@ export const Work = (props: WorkPropsType) => {
 
 const StyledWork = styled.div`
   min-height: 636px;
-  max-width: 522px;
-  width: 100%;
+  width: 360px;
+  flex-grow: 1;
   background-color: rgb(34, 37, 37);
 
   display: flex;
   flex-direction: column;
   border-radius: 6px;
+
+  @media ${theme.media.desctop} {
+    max-width: 522px;
+  }
 `;
 
 const ImgWrapper = styled.div`
@@ -88,6 +92,7 @@ const StyledWorkTitle = styled.h3`
 
 const StyledWorkSkills = styled.ul`
   display: flex;
+  flex-wrap: wrap;
   gap: 12px;
   margin-top: 10px;
 `;
@@ -97,6 +102,7 @@ const StyledWorkSkillsItem = styled.li`
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   padding: 0 16px;
   border-radius: 4px;
 

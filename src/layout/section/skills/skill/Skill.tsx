@@ -20,19 +20,19 @@ export const Skill = (props: SkillPropsType) => {
 };
 
 const StyledSkill = styled.div`
-  width: 120px;
+  max-width: 120px;
+  width: 100%;
   min-height: 164px;
 
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  /* flex-grow: 1; */
 
-  @media ${theme.media.mobile} {
+  /* @media ${theme.media.mobile} {
     width: 88px;
     min-height: 120px;
-  }
+  } */
 `;
 
 const StyledSkillTitle = styled.h5`
