@@ -75,10 +75,6 @@ const Image = styled.img`
   object-fit: cover;
 
 
-  /* @media ${theme.media.mobile} {
-    width: 320px;
-    height: 240px;
-  } */
 `;
 
 const StyledMainTitle = styled.h1`
