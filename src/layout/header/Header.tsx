@@ -1,36 +1,32 @@
 import React from "react";
-import styled from "styled-components";
 import { Logo } from "../../components/logo/Logo";
 import { Container } from "../../components/Container";
 import { StyledFlexWrapper } from "../../components/FlexWrapper";
-import { theme } from "../../styles/Theme";
-import { HeaderMenu } from "./headerMenu/HeaderMenu";
-import { MobileMenu } from "./mobileMenu/MobileMenu";
+import { DesctopMenu } from "./headerMenu/desctopMenu/DesctopMenu";
+import { MobileMenu } from "./headerMenu/mobileMenu/MobileMenu";
+import { S } from "./Header_Styles";
 
 export const navListItems = ["Projects", "Contact"];
 
-export const Header = () => {
+export const Header: React.FC = () => {
+
+  const [width, setWidth] = React.useState(window.innerWidth);
+  const breakpoinr = 768;
+
+  React.useEffect(() => {
+    const handleWindowResize = () => setWidth(window.innerWidth);
+    window.addEventListener('resize', handleWindowResize);
+    return () => window.removeEventListener('resize', handleWindowResize);
+  }, [])
+
   return (
-    <StyledHeader>
+    <S.Header>
       <Container>
         <StyledFlexWrapper justify={"space-between"}>
           <Logo />
-          <HeaderMenu menuList={navListItems} />
-          <MobileMenu menuList={navListItems}/>
+          {width < breakpoinr ? <MobileMenu menuList={navListItems}/> : <DesctopMenu menuList={navListItems} />}         
         </StyledFlexWrapper>
       </Container>
-    </StyledHeader>
+    </S.Header>
   );
 };
-
-const StyledHeader = styled.header`
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 99999;
-  height: 100px; // Сомнительно
-  padding-top: 30px;
-  background-color: ${theme.color.primaryBg};
-
-`;
