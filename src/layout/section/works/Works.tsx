@@ -1,17 +1,18 @@
 import React from "react";
-import styled from "styled-components";
 import { SectionTitle } from "../../../components/SectionTitle";
 import { StyledFlexWrapper } from "../../../components/FlexWrapper";
 import { Work } from "./work/Work";
 import project1 from "../../../assets/img/project1.png";
 import { Container } from "../../../components/Container";
+import { S } from "./Works_Styles";
 
 const FirstArrSkills = ['javascript', 'PostgreSQL', 'React', 'redux'];
 const SecondArrSkills = ['javascript', 'React Native', 'redux'];
 
-export const Works = () => {
+
+export const Works: React.FC = () => {
   return (
-    <StyledWorks>
+    <S.Works>
       <Container>
         <SectionTitle marginBottom={'32px'}>Projects</SectionTitle>
         <StyledFlexWrapper justify={"space-between"} wrap={"wrap"} gap={'20px'}>
@@ -49,10 +50,6 @@ export const Works = () => {
           />
         </StyledFlexWrapper>
       </Container>
-    </StyledWorks>
+    </S.Works>
   );
 };
-
-const StyledWorks = styled.section`
-  margin-bottom: 130px;
-`;
