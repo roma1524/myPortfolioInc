@@ -9,12 +9,12 @@ type IconPropsType = {
   view?: string
 };
 
-export const Icon = (props: IconPropsType) => {
+export const Icon: React.FC<IconPropsType> = (props: IconPropsType) => {
   return (
     <StyledSvg
-      width= {props.width || '59px'}
-      height= {props.height || '42px'}
-      viewBox= {props.view || "0 0 59 42"} fill="none" xmlns="http://www.w3.org/2000/svg">
+      width= {props.width || '120px'}
+      height= {props.height || '120px'}
+      viewBox= {props.view || "0 0 120 120"} fill="none" xmlns="http://www.w3.org/2000/svg">
       <use xlinkHref={`${icoSprt}#${props.iconId}`} />
     </StyledSvg>
   );

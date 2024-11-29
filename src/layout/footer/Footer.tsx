@@ -1,87 +1,49 @@
 import React from "react";
-import styled from "styled-components";
 import { Nav } from "../../components/nav/Nav";
 import { navListItems } from "../header/Header";
 import { Icon } from "../../components/icon/Icon";
+import { S } from "./Footer_Styles";
 
-export const Footer = () => {
+const footerSocialLinks = [
+  {
+    nameId: "mail",
+    title: "gmail"
+  },
+  {
+    nameId: "linkedSvg",
+    title: "linkedin"
+  },
+  {
+    nameId: "gitSocial",
+    title: "GITHUB"
+  }
+];
+
+export const Footer: React.FC = () => {
   return (
-    <StyledFooter>
-      <StyledSocialIconsList>
-        <StyledSocialItem>
-          <StyledSocialItemLink href="#">
-            <Icon
-              height={"21px"}
-              width={"21px"}
-              view={"0 0 21px 21px"}
-              iconId={"mail"}
-            />
-          </StyledSocialItemLink>
-          <StyledFooterTitle>gmail</StyledFooterTitle>
-        </StyledSocialItem>
+    <S.Footer>
+      <S.SocialIconsList>
+        {footerSocialLinks.map((item, index) => {
+          return (
+            <S.SocialItem key={index}>
+              <S.SocialItemLink href="#">
+                <Icon
+                  height={"21px"}
+                  width={"21px"}
+                  view={"0 0 21px 21px"}
+                  iconId={item.nameId}
+                />
+              </S.SocialItemLink>
+              <S.FooterTitle>{item.title}</S.FooterTitle>
+            </S.SocialItem>
+          );
+        })}
 
-        <StyledSocialItem>
-          <StyledSocialItemLink href="#">
-            <Icon
-              height={"21px"}
-              width={"21px"}
-              view={"0 0 21px 21px"}
-              iconId={"linked"}
-            />
-          </StyledSocialItemLink>
-          <StyledFooterTitle>linkedin</StyledFooterTitle>
-        </StyledSocialItem>
-
-        <StyledSocialItem>
-          <StyledSocialItemLink href="#">
-            <Icon
-              height={"21px"}
-              width={"21px"}
-              view={"0 0 21px 21px"}
-              iconId={"git"}
-            />
-          </StyledSocialItemLink>
-          <StyledFooterTitle>GITHUB</StyledFooterTitle>
-        </StyledSocialItem>
-      </StyledSocialIconsList>
+      </S.SocialIconsList>
 
       <Nav menuList={navListItems} />
 
-      <StyledCopyright>WEB DEVELOPER 2021</StyledCopyright>
-    </StyledFooter>
+      <S.Copyright>WEB DEVELOPER 2021</S.Copyright>
+    </S.Footer>
   );
 };
-
-const StyledFooter = styled.footer`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  padding: 20px 0 100px 0;
-`;
-
-const StyledSocialIconsList = styled.ul`
-  display: flex;
-  gap: 15px;
-`;
-
-const StyledSocialItem = styled.li`
-  display: flex;
-  flex-direction: column;
-`;
-
-const StyledFooterTitle = styled.span`
-
-  font-size: 12px;
-  font-weight: 400;
-  text-align: center;
-  text-transform: uppercase;
-`;
-
-const StyledSocialItemLink = styled.a``;
-
-const StyledCopyright = styled.small`
-  display: inline-block;
-  font-size: 14px;
-  line-height: 26px;
-`;
